@@ -1,0 +1,35 @@
+mutation CreateSeedData @transaction @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public.") {
+  # Example seed data for demonstration purposes.  Replace with actual data.
+  # Ensure data conforms to your specific schema.
+  # Insert a user
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      username: "demouser1",
+      email: "demo1@example.com",
+      createdAt: "2024-01-01T00:00:00Z" # Replace with a valid timestamp if needed
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      username: "demouser2",
+      email: "demo2@example.com",
+      createdAt: "2024-01-01T00:00:00Z" # Replace with a valid timestamp if needed
+    }
+  ])
+
+  # Insert a post, referencing the user
+  post_insertMany(data: [
+    {
+      id: "650e8400-e29b-41d4-a716-446655440000",
+      userUid: "550e8400-e29b-41d4-a716-446655440000",
+      text: "Example post from demouser1",
+      createdAt: "2024-01-02T00:00:00Z" # Replace with a valid timestamp if needed
+    },
+    {
+      id: "650e8400-e29b-41d4-a716-446655440001",
+      userUid: "550e8400-e29b-41d4-a716-446655440001",
+      text: "Example post from demouser2",
+      createdAt: "2024-01-02T00:00:00Z" # Replace with a valid timestamp if needed
+    }
+  ])
+}

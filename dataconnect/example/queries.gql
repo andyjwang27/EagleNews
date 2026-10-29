@@ -1,0 +1,33 @@
+mutation CreatePublicMovieList($name: String!, $description: String!) @auth(level: PUBLIC, insecureReason: "Public movie lists do not contain sensitive information.") {
+  movieList_insert(data: {
+    name: $name,
+    description: $description,
+    isPublic: true,
+    userId_expr: "uuidV4()" # Dummy userId for public lists
+    createdAt_expr: "request.time"
+    updatedAt_expr: "request.time"
+  })
+}
+
+query GetMyMovieLists @auth(level: USER) {
+  movieLists(where: { userId: { eq_expr: "auth.uid" } }) {
+    id
+    name
+    description
+    isPublic
+    createdAt
+    updatedAt
+  }
+}
+
+mutation AddMovieToMyList($movieListId: UUID!, $movieId: UUID!, $position: Int!) @auth(level: USER) {
+  movieListEntry_insert(data: {
+    movieListId: $movieListId,
+    movieId: $movieId,
+    position: $position
+  })
+}
+
+mutation DeleteMyReview($id: UUID!) @auth(level: USER) {
+  review_delete(key: {id: $id})
+}
