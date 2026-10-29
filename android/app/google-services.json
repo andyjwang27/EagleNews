@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "350505976567",
+    "project_id": "eaglenews-aee1a",
+    "storage_bucket": "eaglenews-aee1a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350505976567:android:6c426f6fcb1b7e714309f2",
+        "android_client_info": {
+          "package_name": "com.eaglenews.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350505976567-ptteke2n3u12uod8p6jal3mptuhlhvvk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eaglenews.app",
+            "certificate_hash": "6692144af743d21043c98537b89f03287cd38392"
+          }
+        },
+        {
+          "client_id": "350505976567-1brd7mb154gupn7ir9tvt7o4ti5ec3ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7_9YMAed_7XR0oR3CqKsD1uSPB8CxVFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350505976567-1brd7mb154gupn7ir9tvt7o4ti5ec3ri.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "350505976567-fv0tdorkjjjon81sortu3fe4ba3vtos5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "eagleNews.EagleNews"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
