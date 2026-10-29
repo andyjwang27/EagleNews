@@ -16,6 +16,7 @@ Eagle News is programmed in both Apple SwiftUI and Android Kotlin languages. The
   - Admin only page to create or delete announcements, links, and assign or remove user roles
 
 **Running the Applications:**
+
   iOS:
 
   Open the XCode project and run using the native iOS simulator on any iPhone device.
