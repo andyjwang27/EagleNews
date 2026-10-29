@@ -37,6 +37,5 @@ data class ToDoListItem(
     }
 }
 
-/** Mirrors the private `sortPinnedAndDueDate` helper used in every SwiftUI view. */
 fun List<ToDoListItem>.sortPinnedAndDueDate(): List<ToDoListItem> =
     sortedWith(compareByDescending<ToDoListItem> { it.pinned }.thenBy { it.dueDate })
